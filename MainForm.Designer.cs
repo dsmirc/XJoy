@@ -66,7 +66,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
 			this.NotifyContextMenu.Name = "NotifyContextMenu";
-			this.NotifyContextMenu.Size = new System.Drawing.Size(179, 54);
+			this.NotifyContextMenu.Size = new System.Drawing.Size(179, 76);
 			// 
 			// showXJoyWindowToolStripMenuItem
 			// 

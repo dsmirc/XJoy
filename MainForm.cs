@@ -44,6 +44,17 @@ namespace XJoy
 				XInputObj = new XInputManager();
 				vJoyObj = new vJoyManager();
 				RefreshDeviceList();
+
+				Application.ApplicationExit += new EventHandler(delegate (Object o, EventArgs a)
+				{
+					StopThread();
+					if(MainNotifyIcon != null)
+					{
+						MainNotifyIcon.Icon = null;
+						MainNotifyIcon.Dispose();
+						MainNotifyIcon = null;
+					}
+				});
 			}
 			catch (System.IO.FileNotFoundException e)
 			{
