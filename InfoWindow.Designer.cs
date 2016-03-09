@@ -39,6 +39,7 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.linkMasterKenth = new System.Windows.Forms.LinkLabel();
 			this.labelVersion = new System.Windows.Forms.Label();
+			this.labelAssemblyVersion = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
@@ -103,18 +104,18 @@
 			// label5
 			// 
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(13, 94);
+			this.label5.Location = new System.Drawing.Point(12, 142);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(307, 27);
+			this.label5.Size = new System.Drawing.Size(308, 27);
 			this.label5.TabIndex = 6;
 			this.label5.Text = "Made by Master Kenth";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// linkMasterKenth
 			// 
-			this.linkMasterKenth.Location = new System.Drawing.Point(13, 121);
+			this.linkMasterKenth.Location = new System.Drawing.Point(12, 169);
 			this.linkMasterKenth.Name = "linkMasterKenth";
-			this.linkMasterKenth.Size = new System.Drawing.Size(307, 23);
+			this.linkMasterKenth.Size = new System.Drawing.Size(308, 23);
 			this.linkMasterKenth.TabIndex = 7;
 			this.linkMasterKenth.TabStop = true;
 			this.linkMasterKenth.Text = "www.masterkenth.com";
@@ -126,16 +127,27 @@
 			this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelVersion.Location = new System.Drawing.Point(13, 63);
 			this.labelVersion.Name = "labelVersion";
-			this.labelVersion.Size = new System.Drawing.Size(307, 24);
+			this.labelVersion.Size = new System.Drawing.Size(307, 21);
 			this.labelVersion.TabIndex = 8;
-			this.labelVersion.Text = "v 0.x.x";
+			this.labelVersion.Text = "<version>";
 			this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// labelAssemblyVersion
+			// 
+			this.labelAssemblyVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelAssemblyVersion.Location = new System.Drawing.Point(12, 84);
+			this.labelAssemblyVersion.Name = "labelAssemblyVersion";
+			this.labelAssemblyVersion.Size = new System.Drawing.Size(307, 21);
+			this.labelAssemblyVersion.TabIndex = 9;
+			this.labelAssemblyVersion.Text = "<assembly version>";
+			this.labelAssemblyVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// InfoWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(328, 261);
+			this.Controls.Add(this.labelAssemblyVersion);
 			this.Controls.Add(this.labelVersion);
 			this.Controls.Add(this.linkMasterKenth);
 			this.Controls.Add(this.label5);
@@ -170,5 +182,6 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.LinkLabel linkMasterKenth;
 		private System.Windows.Forms.Label labelVersion;
+		private System.Windows.Forms.Label labelAssemblyVersion;
 	}
 }
