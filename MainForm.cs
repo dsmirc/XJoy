@@ -39,9 +39,22 @@ namespace XJoy
 		public MainForm()
 		{
 			InitializeComponent();
-			XInputObj = new XInputManager();
-			vJoyObj = new vJoyManager();
-			RefreshDeviceList();
+			try
+			{
+				XInputObj = new XInputManager();
+				vJoyObj = new vJoyManager();
+				RefreshDeviceList();
+			}
+			catch (System.IO.FileNotFoundException e)
+			{
+				MessageBox.Show("FileNotFoundException: " + e.FileName + ". This may occur because of missing DLLs. Make sure to include everything! Application will exit..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Environment.Exit(-1);
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show("Error: " + e.Message + ". This may occur because of missing DLLs. Make sure to include everything! Application will exit..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Environment.Exit(-1);
+			}
 		}
 
 		private void SetActiveState(bool bActive)
