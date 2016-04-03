@@ -8,7 +8,7 @@ using SharpDX.XInput;
 
 namespace XJoy
 {
-	class XInputManager
+	public class XInputManager
 	{
 		public struct InputState
 		{
@@ -40,6 +40,33 @@ namespace XJoy
 			public byte LeftTrigger;
 			public byte RightTrigger;
 		}
+
+		public enum Inputs
+		{
+			LSX = 0,
+			LSY,
+			RSX,
+			RSY,
+			LT,
+			RT,
+			A,
+			B,
+			X,
+			Y,
+			LB,
+			RB,
+			DPadLeft,
+			DPadRight,
+			DPadUp,
+			DPadDown,
+			LeftStick,
+			RightStick,
+			Start,
+			Back
+		}
+
+		// Should match length of Inputs
+		public const short InputCount = 20;
 
 		private Controller m_activeController = null;
 
@@ -112,6 +139,116 @@ namespace XJoy
 			OutState.RightTrigger = ControllerData.Gamepad.RightTrigger;
 
 			return OutState;
+		}
+
+		public static bool GetInputStateButtonValueFromInputType(ref InputState StateData, Inputs Button)
+		{
+			switch (Button)
+			{
+				case Inputs.A:
+					return StateData.bButtonA;
+				case Inputs.B:
+					return StateData.bButtonB;
+				case Inputs.X:
+					return StateData.bButtonX;
+				case Inputs.Y:
+					return StateData.bButtonY;
+				case Inputs.LB:
+					return StateData.bButtonLeftShoulder;
+				case Inputs.RB:
+					return StateData.bButtonRightShoulder;
+				case Inputs.DPadLeft:
+					return StateData.bButtonDPadLeft;
+				case Inputs.DPadRight:
+					return StateData.bButtonDPadRight;
+				case Inputs.DPadUp:
+					return StateData.bButtonDPadUp;
+				case Inputs.DPadDown:
+					return StateData.bButtonDPadDown;
+				case Inputs.LeftStick:
+					return StateData.bButtonLeftThumb;
+				case Inputs.RightStick:
+					return StateData.bButtonRightThumb;
+				case Inputs.Start:
+					return StateData.bButtonStart;
+				case Inputs.Back:
+					return StateData.bButtonBack;
+
+				case Inputs.LSX:
+				case Inputs.LSY:
+				case Inputs.RSX:
+				case Inputs.RSY:
+				case Inputs.LT:
+				case Inputs.RT:
+				default:
+					return false;
+			}
+		}
+
+		public static short GetInputStateAxisValueFromInputType(ref InputState StateData, Inputs Axis)
+		{
+			switch (Axis)
+			{
+				case Inputs.LSX:
+					return StateData.LeftStickX;
+				case Inputs.LSY:
+					return StateData.LeftStickY;
+				case Inputs.RSX:
+					return StateData.RightStickX;
+				case Inputs.RSY:
+					return StateData.RightStickY;
+				case Inputs.LT:
+					return StateData.LeftTrigger;
+				case Inputs.RT:
+					return StateData.RightTrigger;
+				case Inputs.A:
+				case Inputs.B:
+				case Inputs.X:
+				case Inputs.Y:
+				case Inputs.LB:
+				case Inputs.RB:
+				case Inputs.DPadLeft:
+				case Inputs.DPadRight:
+				case Inputs.DPadUp:
+				case Inputs.DPadDown:
+				case Inputs.LeftStick:
+				case Inputs.RightStick:
+				case Inputs.Start:
+				case Inputs.Back:
+				default:
+					return 0;
+			}
+		}
+
+		public static int[] GetAxisLimitsForInput(Inputs Axis)
+		{
+			switch (Axis)
+			{
+				case Inputs.LSX:
+				case Inputs.LSY:
+				case Inputs.RSX:
+				case Inputs.RSY:
+					return new int[] { -32768, 32767 };
+				case Inputs.LT:
+				case Inputs.RT:
+					return new int[] { 0, 255 };
+				case Inputs.A:
+				case Inputs.B:
+				case Inputs.X:
+				case Inputs.Y:
+				case Inputs.LB:
+				case Inputs.RB:
+				case Inputs.DPadLeft:
+				case Inputs.DPadRight:
+				case Inputs.DPadUp:
+				case Inputs.DPadDown:
+				case Inputs.LeftStick:
+				case Inputs.RightStick:
+				case Inputs.Start:
+				case Inputs.Back:
+				default:
+					return new int[] { 0, 0 };
+			}
 		}
 	}
 }

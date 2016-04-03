@@ -10,6 +10,42 @@ namespace XJoy
 {
 	class vJoyManager
 	{
+		public const int MaxButtons = 128;
+
+		public class DigitalInput
+		{
+			public uint ButtonIndex;
+			string DisplayName;
+
+			public DigitalInput(uint _ButtonIndex, string _DisplayName)
+			{
+				ButtonIndex = _ButtonIndex;
+				DisplayName = _DisplayName;
+			}
+
+			public override string ToString()
+			{
+				return DisplayName;
+			}
+		}
+
+		public class AnalogInput
+		{
+			public HID_USAGES Axis;
+			string DisplayName;
+
+			public AnalogInput(HID_USAGES _Axis, string _DisplayName)
+			{
+				Axis = _Axis;
+				DisplayName = _DisplayName;
+			}
+
+			public override string ToString()
+			{
+				return DisplayName;
+			}
+		}
+
 		public struct AxisExtents
 		{
 			public long Min;
@@ -21,6 +57,11 @@ namespace XJoy
 		private vJoy m_joystick;
 		private uint m_vJoyID = 0;
 		private bool bDeviceAcquired = false;
+
+		public uint ActiveVJoyID
+		{
+			get { return m_vJoyID; }
+		}
 
 		public bool IsDeviceAcquired
 		{
@@ -135,6 +176,29 @@ namespace XJoy
 			return minval;
 		}
 
+		public int GetButtonCount(uint Index)
+		{
+			return m_joystick.GetVJDButtonNumber(Index);
+		}
+		
+		public List<HID_USAGES> GetExistingAxes(uint Index)
+		{
+			List<HID_USAGES> availableAxes = new List<HID_USAGES>();
+
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_X)) availableAxes.Add(HID_USAGES.HID_USAGE_X);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_Y)) availableAxes.Add(HID_USAGES.HID_USAGE_Y);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_Z)) availableAxes.Add(HID_USAGES.HID_USAGE_Z);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_RX)) availableAxes.Add(HID_USAGES.HID_USAGE_RX);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_RY)) availableAxes.Add(HID_USAGES.HID_USAGE_RY);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_RZ)) availableAxes.Add(HID_USAGES.HID_USAGE_RZ);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_SL0)) availableAxes.Add(HID_USAGES.HID_USAGE_SL0);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_SL1)) availableAxes.Add(HID_USAGES.HID_USAGE_SL1);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_WHL)) availableAxes.Add(HID_USAGES.HID_USAGE_WHL);
+			if (m_joystick.GetVJDAxisExist(Index, HID_USAGES.HID_USAGE_POV)) availableAxes.Add(HID_USAGES.HID_USAGE_POV);
+
+			return availableAxes;
+		}
+
 		public AxisExtents GetAxisExtents(HID_USAGES Axis)
 		{
 			return new AxisExtents(GetMinForAxis(Axis), GetMaxForAxis(Axis));
@@ -153,6 +217,35 @@ namespace XJoy
 			if(bDeviceAcquired)
 			{
 				m_joystick.SetAxis(Value, m_vJoyID, Axis);
+			}
+		}
+
+		public static string AxisToFriendlyName(HID_USAGES Axis)
+		{
+			switch (Axis)
+			{
+				case HID_USAGES.HID_USAGE_X:
+					return "X";
+				case HID_USAGES.HID_USAGE_Y:
+					return "Y";
+				case HID_USAGES.HID_USAGE_Z:
+					return "Z";
+				case HID_USAGES.HID_USAGE_RX:
+					return "RX";
+				case HID_USAGES.HID_USAGE_RY:
+					return "RY";
+				case HID_USAGES.HID_USAGE_RZ:
+					return "RZ";
+				case HID_USAGES.HID_USAGE_SL0:
+					return "Slider";
+				case HID_USAGES.HID_USAGE_SL1:
+					return "Dial/Slider 2";
+				case HID_USAGES.HID_USAGE_WHL:
+					return "Wheel";
+				case HID_USAGES.HID_USAGE_POV:
+					return "PoV";
+				default:
+					return Axis.ToString();
 			}
 		}
 	}

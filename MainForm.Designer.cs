@@ -44,8 +44,51 @@
 			this.comboVJoyDevices = new System.Windows.Forms.ComboBox();
 			this.labelInfo = new System.Windows.Forms.Label();
 			this.panelControls = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.RemappingPanel = new System.Windows.Forms.Panel();
+			this.inputBack = new System.Windows.Forms.ComboBox();
+			this.inputStart = new System.Windows.Forms.ComboBox();
+			this.inputRightStick = new System.Windows.Forms.ComboBox();
+			this.inputLeftStick = new System.Windows.Forms.ComboBox();
+			this.inputDPadDown = new System.Windows.Forms.ComboBox();
+			this.inputDPadUp = new System.Windows.Forms.ComboBox();
+			this.inputDPadRight = new System.Windows.Forms.ComboBox();
+			this.inputDPadLeft = new System.Windows.Forms.ComboBox();
+			this.inputRB = new System.Windows.Forms.ComboBox();
+			this.inputLB = new System.Windows.Forms.ComboBox();
+			this.inputY = new System.Windows.Forms.ComboBox();
+			this.inputX = new System.Windows.Forms.ComboBox();
+			this.inputB = new System.Windows.Forms.ComboBox();
+			this.inputA = new System.Windows.Forms.ComboBox();
+			this.inputRT = new System.Windows.Forms.ComboBox();
+			this.inputLT = new System.Windows.Forms.ComboBox();
+			this.inputRSY = new System.Windows.Forms.ComboBox();
+			this.inputRSX = new System.Windows.Forms.ComboBox();
+			this.inputLSY = new System.Windows.Forms.ComboBox();
+			this.label22 = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.label19 = new System.Windows.Forms.Label();
+			this.label20 = new System.Windows.Forms.Label();
+			this.label21 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
+			this.label14 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.inputLSX = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			this.NotifyContextMenu.SuspendLayout();
 			this.panelControls.SuspendLayout();
+			this.RemappingPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// MainNotifyIcon
@@ -66,7 +109,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
 			this.NotifyContextMenu.Name = "NotifyContextMenu";
-			this.NotifyContextMenu.Size = new System.Drawing.Size(179, 76);
+			this.NotifyContextMenu.Size = new System.Drawing.Size(179, 54);
 			// 
 			// showXJoyWindowToolStripMenuItem
 			// 
@@ -99,7 +142,7 @@
             "RandomSoft© Basic Elite Airpad"});
 			this.comboDevices.Location = new System.Drawing.Point(94, 3);
 			this.comboDevices.Name = "comboDevices";
-			this.comboDevices.Size = new System.Drawing.Size(253, 21);
+			this.comboDevices.Size = new System.Drawing.Size(209, 21);
 			this.comboDevices.TabIndex = 1;
 			this.comboDevices.SelectedIndexChanged += new System.EventHandler(this.comboDevices_SelectedIndexChanged);
 			// 
@@ -117,7 +160,7 @@
 			this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonRefresh.BackgroundImage = global::XJoy.Properties.Resources.icon_refresh_darkgreen_24;
 			this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonRefresh.Location = new System.Drawing.Point(351, 2);
+			this.buttonRefresh.Location = new System.Drawing.Point(307, 2);
 			this.buttonRefresh.Name = "buttonRefresh";
 			this.buttonRefresh.Size = new System.Drawing.Size(23, 23);
 			this.buttonRefresh.TabIndex = 3;
@@ -129,7 +172,7 @@
 			this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonInfo.BackgroundImage = global::XJoy.Properties.Resources.icon_question_black_32;
 			this.buttonInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonInfo.Location = new System.Drawing.Point(353, 80);
+			this.buttonInfo.Location = new System.Drawing.Point(309, 333);
 			this.buttonInfo.Name = "buttonInfo";
 			this.buttonInfo.Size = new System.Drawing.Size(32, 32);
 			this.buttonInfo.TabIndex = 4;
@@ -139,7 +182,7 @@
 			// buttonActivate
 			// 
 			this.buttonActivate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.buttonActivate.Location = new System.Drawing.Point(11, 85);
+			this.buttonActivate.Location = new System.Drawing.Point(11, 338);
 			this.buttonActivate.Name = "buttonActivate";
 			this.buttonActivate.Size = new System.Drawing.Size(75, 23);
 			this.buttonActivate.TabIndex = 5;
@@ -168,19 +211,19 @@
             "RandomSoft© Basic Elite Airpad"});
 			this.comboVJoyDevices.Location = new System.Drawing.Point(94, 30);
 			this.comboVJoyDevices.Name = "comboVJoyDevices";
-			this.comboVJoyDevices.Size = new System.Drawing.Size(253, 21);
+			this.comboVJoyDevices.Size = new System.Drawing.Size(209, 21);
 			this.comboVJoyDevices.TabIndex = 6;
 			this.comboVJoyDevices.SelectedIndexChanged += new System.EventHandler(this.comboVJoyDevices_SelectedIndexChanged);
 			// 
 			// labelInfo
 			// 
 			this.labelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.labelInfo.AutoSize = true;
-			this.labelInfo.Location = new System.Drawing.Point(92, 90);
+			this.labelInfo.Location = new System.Drawing.Point(92, 333);
 			this.labelInfo.Name = "labelInfo";
-			this.labelInfo.Size = new System.Drawing.Size(218, 13);
+			this.labelInfo.Size = new System.Drawing.Size(204, 32);
 			this.labelInfo.TabIndex = 8;
 			this.labelInfo.Text = "Selected devices and press Activate to start.";
+			this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// panelControls
 			// 
@@ -191,14 +234,479 @@
 			this.panelControls.Controls.Add(this.comboVJoyDevices);
 			this.panelControls.Location = new System.Drawing.Point(11, 12);
 			this.panelControls.Name = "panelControls";
-			this.panelControls.Size = new System.Drawing.Size(374, 60);
+			this.panelControls.Size = new System.Drawing.Size(330, 60);
 			this.panelControls.TabIndex = 9;
+			// 
+			// label3
+			// 
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(0, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(330, 45);
+			this.label3.TabIndex = 10;
+			this.label3.Text = "Input Remapping";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// RemappingPanel
+			// 
+			this.RemappingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.RemappingPanel.Controls.Add(this.inputBack);
+			this.RemappingPanel.Controls.Add(this.inputStart);
+			this.RemappingPanel.Controls.Add(this.inputRightStick);
+			this.RemappingPanel.Controls.Add(this.inputLeftStick);
+			this.RemappingPanel.Controls.Add(this.inputDPadDown);
+			this.RemappingPanel.Controls.Add(this.inputDPadUp);
+			this.RemappingPanel.Controls.Add(this.inputDPadRight);
+			this.RemappingPanel.Controls.Add(this.inputDPadLeft);
+			this.RemappingPanel.Controls.Add(this.inputRB);
+			this.RemappingPanel.Controls.Add(this.inputLB);
+			this.RemappingPanel.Controls.Add(this.inputY);
+			this.RemappingPanel.Controls.Add(this.inputX);
+			this.RemappingPanel.Controls.Add(this.inputB);
+			this.RemappingPanel.Controls.Add(this.inputA);
+			this.RemappingPanel.Controls.Add(this.inputRT);
+			this.RemappingPanel.Controls.Add(this.inputLT);
+			this.RemappingPanel.Controls.Add(this.inputRSY);
+			this.RemappingPanel.Controls.Add(this.inputRSX);
+			this.RemappingPanel.Controls.Add(this.inputLSY);
+			this.RemappingPanel.Controls.Add(this.label22);
+			this.RemappingPanel.Controls.Add(this.label23);
+			this.RemappingPanel.Controls.Add(this.label18);
+			this.RemappingPanel.Controls.Add(this.label19);
+			this.RemappingPanel.Controls.Add(this.label20);
+			this.RemappingPanel.Controls.Add(this.label21);
+			this.RemappingPanel.Controls.Add(this.label16);
+			this.RemappingPanel.Controls.Add(this.label17);
+			this.RemappingPanel.Controls.Add(this.label14);
+			this.RemappingPanel.Controls.Add(this.label15);
+			this.RemappingPanel.Controls.Add(this.label12);
+			this.RemappingPanel.Controls.Add(this.label13);
+			this.RemappingPanel.Controls.Add(this.label11);
+			this.RemappingPanel.Controls.Add(this.label10);
+			this.RemappingPanel.Controls.Add(this.inputLSX);
+			this.RemappingPanel.Controls.Add(this.label8);
+			this.RemappingPanel.Controls.Add(this.label9);
+			this.RemappingPanel.Controls.Add(this.label6);
+			this.RemappingPanel.Controls.Add(this.label7);
+			this.RemappingPanel.Controls.Add(this.label5);
+			this.RemappingPanel.Controls.Add(this.label4);
+			this.RemappingPanel.Controls.Add(this.label3);
+			this.RemappingPanel.Enabled = false;
+			this.RemappingPanel.Location = new System.Drawing.Point(11, 78);
+			this.RemappingPanel.Name = "RemappingPanel";
+			this.RemappingPanel.Size = new System.Drawing.Size(330, 249);
+			this.RemappingPanel.TabIndex = 11;
+			// 
+			// inputBack
+			// 
+			this.inputBack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputBack.FormattingEnabled = true;
+			this.inputBack.Location = new System.Drawing.Point(241, 226);
+			this.inputBack.Name = "inputBack";
+			this.inputBack.Size = new System.Drawing.Size(88, 21);
+			this.inputBack.TabIndex = 50;
+			this.inputBack.Tag = "InputDigital";
+			this.inputBack.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputStart
+			// 
+			this.inputStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputStart.FormattingEnabled = true;
+			this.inputStart.Location = new System.Drawing.Point(241, 206);
+			this.inputStart.Name = "inputStart";
+			this.inputStart.Size = new System.Drawing.Size(88, 21);
+			this.inputStart.TabIndex = 49;
+			this.inputStart.Tag = "InputDigital";
+			this.inputStart.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputRightStick
+			// 
+			this.inputRightStick.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputRightStick.FormattingEnabled = true;
+			this.inputRightStick.Location = new System.Drawing.Point(241, 186);
+			this.inputRightStick.Name = "inputRightStick";
+			this.inputRightStick.Size = new System.Drawing.Size(88, 21);
+			this.inputRightStick.TabIndex = 48;
+			this.inputRightStick.Tag = "InputDigital";
+			this.inputRightStick.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputLeftStick
+			// 
+			this.inputLeftStick.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputLeftStick.FormattingEnabled = true;
+			this.inputLeftStick.Location = new System.Drawing.Point(241, 166);
+			this.inputLeftStick.Name = "inputLeftStick";
+			this.inputLeftStick.Size = new System.Drawing.Size(88, 21);
+			this.inputLeftStick.TabIndex = 47;
+			this.inputLeftStick.Tag = "InputDigital";
+			this.inputLeftStick.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputDPadDown
+			// 
+			this.inputDPadDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputDPadDown.FormattingEnabled = true;
+			this.inputDPadDown.Location = new System.Drawing.Point(241, 146);
+			this.inputDPadDown.Name = "inputDPadDown";
+			this.inputDPadDown.Size = new System.Drawing.Size(88, 21);
+			this.inputDPadDown.TabIndex = 46;
+			this.inputDPadDown.Tag = "InputDigital";
+			this.inputDPadDown.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputDPadUp
+			// 
+			this.inputDPadUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputDPadUp.FormattingEnabled = true;
+			this.inputDPadUp.Location = new System.Drawing.Point(241, 126);
+			this.inputDPadUp.Name = "inputDPadUp";
+			this.inputDPadUp.Size = new System.Drawing.Size(88, 21);
+			this.inputDPadUp.TabIndex = 45;
+			this.inputDPadUp.Tag = "InputDigital";
+			this.inputDPadUp.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputDPadRight
+			// 
+			this.inputDPadRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputDPadRight.FormattingEnabled = true;
+			this.inputDPadRight.Location = new System.Drawing.Point(241, 106);
+			this.inputDPadRight.Name = "inputDPadRight";
+			this.inputDPadRight.Size = new System.Drawing.Size(88, 21);
+			this.inputDPadRight.TabIndex = 44;
+			this.inputDPadRight.Tag = "InputDigital";
+			this.inputDPadRight.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputDPadLeft
+			// 
+			this.inputDPadLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputDPadLeft.FormattingEnabled = true;
+			this.inputDPadLeft.Location = new System.Drawing.Point(241, 86);
+			this.inputDPadLeft.Name = "inputDPadLeft";
+			this.inputDPadLeft.Size = new System.Drawing.Size(88, 21);
+			this.inputDPadLeft.TabIndex = 43;
+			this.inputDPadLeft.Tag = "InputDigital";
+			this.inputDPadLeft.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputRB
+			// 
+			this.inputRB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputRB.FormattingEnabled = true;
+			this.inputRB.Location = new System.Drawing.Point(241, 66);
+			this.inputRB.Name = "inputRB";
+			this.inputRB.Size = new System.Drawing.Size(88, 21);
+			this.inputRB.TabIndex = 42;
+			this.inputRB.Tag = "InputDigital";
+			this.inputRB.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputLB
+			// 
+			this.inputLB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputLB.FormattingEnabled = true;
+			this.inputLB.Location = new System.Drawing.Point(241, 46);
+			this.inputLB.Name = "inputLB";
+			this.inputLB.Size = new System.Drawing.Size(88, 21);
+			this.inputLB.TabIndex = 41;
+			this.inputLB.Tag = "InputDigital";
+			this.inputLB.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputY
+			// 
+			this.inputY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputY.FormattingEnabled = true;
+			this.inputY.Location = new System.Drawing.Point(75, 226);
+			this.inputY.Name = "inputY";
+			this.inputY.Size = new System.Drawing.Size(88, 21);
+			this.inputY.TabIndex = 40;
+			this.inputY.Tag = "InputDigital";
+			this.inputY.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputX
+			// 
+			this.inputX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputX.FormattingEnabled = true;
+			this.inputX.Location = new System.Drawing.Point(75, 206);
+			this.inputX.Name = "inputX";
+			this.inputX.Size = new System.Drawing.Size(88, 21);
+			this.inputX.TabIndex = 39;
+			this.inputX.Tag = "InputDigital";
+			this.inputX.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputB
+			// 
+			this.inputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputB.FormattingEnabled = true;
+			this.inputB.Location = new System.Drawing.Point(75, 186);
+			this.inputB.Name = "inputB";
+			this.inputB.Size = new System.Drawing.Size(88, 21);
+			this.inputB.TabIndex = 38;
+			this.inputB.Tag = "InputDigital";
+			this.inputB.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputA
+			// 
+			this.inputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputA.FormattingEnabled = true;
+			this.inputA.Location = new System.Drawing.Point(75, 166);
+			this.inputA.Name = "inputA";
+			this.inputA.Size = new System.Drawing.Size(88, 21);
+			this.inputA.TabIndex = 37;
+			this.inputA.Tag = "InputDigital";
+			this.inputA.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputRT
+			// 
+			this.inputRT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputRT.FormattingEnabled = true;
+			this.inputRT.Location = new System.Drawing.Point(75, 146);
+			this.inputRT.Name = "inputRT";
+			this.inputRT.Size = new System.Drawing.Size(88, 21);
+			this.inputRT.TabIndex = 36;
+			this.inputRT.Tag = "InputAnalog";
+			this.inputRT.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputLT
+			// 
+			this.inputLT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputLT.FormattingEnabled = true;
+			this.inputLT.Location = new System.Drawing.Point(75, 126);
+			this.inputLT.Name = "inputLT";
+			this.inputLT.Size = new System.Drawing.Size(88, 21);
+			this.inputLT.TabIndex = 35;
+			this.inputLT.Tag = "InputAnalog";
+			this.inputLT.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputRSY
+			// 
+			this.inputRSY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputRSY.FormattingEnabled = true;
+			this.inputRSY.Location = new System.Drawing.Point(75, 106);
+			this.inputRSY.Name = "inputRSY";
+			this.inputRSY.Size = new System.Drawing.Size(88, 21);
+			this.inputRSY.TabIndex = 34;
+			this.inputRSY.Tag = "InputAnalog";
+			this.inputRSY.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputRSX
+			// 
+			this.inputRSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputRSX.FormattingEnabled = true;
+			this.inputRSX.Location = new System.Drawing.Point(75, 86);
+			this.inputRSX.Name = "inputRSX";
+			this.inputRSX.Size = new System.Drawing.Size(88, 21);
+			this.inputRSX.TabIndex = 33;
+			this.inputRSX.Tag = "InputAnalog";
+			this.inputRSX.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// inputLSY
+			// 
+			this.inputLSY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputLSY.FormattingEnabled = true;
+			this.inputLSY.Location = new System.Drawing.Point(75, 66);
+			this.inputLSY.Name = "inputLSY";
+			this.inputLSY.Size = new System.Drawing.Size(88, 21);
+			this.inputLSY.TabIndex = 32;
+			this.inputLSY.Tag = "InputAnalog";
+			this.inputLSY.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// label22
+			// 
+			this.label22.Location = new System.Drawing.Point(169, 225);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(66, 20);
+			this.label22.TabIndex = 31;
+			this.label22.Text = "Back";
+			this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label23
+			// 
+			this.label23.Location = new System.Drawing.Point(169, 205);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(66, 20);
+			this.label23.TabIndex = 30;
+			this.label23.Text = "Start";
+			this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label18
+			// 
+			this.label18.Location = new System.Drawing.Point(169, 185);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(66, 20);
+			this.label18.TabIndex = 29;
+			this.label18.Text = "Right Stick";
+			this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label19
+			// 
+			this.label19.Location = new System.Drawing.Point(169, 165);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(66, 20);
+			this.label19.TabIndex = 28;
+			this.label19.Text = "Left Stick";
+			this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label20
+			// 
+			this.label20.Location = new System.Drawing.Point(169, 65);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(66, 20);
+			this.label20.TabIndex = 27;
+			this.label20.Text = "RB";
+			this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label21
+			// 
+			this.label21.Location = new System.Drawing.Point(169, 45);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(66, 20);
+			this.label21.TabIndex = 26;
+			this.label21.Text = "LB";
+			this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label16
+			// 
+			this.label16.Location = new System.Drawing.Point(169, 145);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(66, 20);
+			this.label16.TabIndex = 25;
+			this.label16.Text = "DPad Down";
+			this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label17
+			// 
+			this.label17.Location = new System.Drawing.Point(169, 125);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(66, 20);
+			this.label17.TabIndex = 24;
+			this.label17.Text = "DPad Up";
+			this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label14
+			// 
+			this.label14.Location = new System.Drawing.Point(169, 105);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(66, 20);
+			this.label14.TabIndex = 23;
+			this.label14.Text = "DPad Right";
+			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label15
+			// 
+			this.label15.Location = new System.Drawing.Point(169, 85);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(66, 20);
+			this.label15.TabIndex = 22;
+			this.label15.Text = "DPad Left";
+			this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label12
+			// 
+			this.label12.Location = new System.Drawing.Point(3, 225);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(66, 20);
+			this.label12.TabIndex = 21;
+			this.label12.Text = "Y";
+			this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label13
+			// 
+			this.label13.Location = new System.Drawing.Point(3, 205);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(66, 20);
+			this.label13.TabIndex = 20;
+			this.label13.Text = "X";
+			this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label11
+			// 
+			this.label11.Location = new System.Drawing.Point(3, 185);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(66, 20);
+			this.label11.TabIndex = 19;
+			this.label11.Text = "B";
+			this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label10
+			// 
+			this.label10.Location = new System.Drawing.Point(3, 165);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(66, 20);
+			this.label10.TabIndex = 18;
+			this.label10.Text = "A";
+			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// inputLSX
+			// 
+			this.inputLSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.inputLSX.FormattingEnabled = true;
+			this.inputLSX.Location = new System.Drawing.Point(75, 46);
+			this.inputLSX.Name = "inputLSX";
+			this.inputLSX.Size = new System.Drawing.Size(88, 21);
+			this.inputLSX.TabIndex = 17;
+			this.inputLSX.Tag = "InputAnalog";
+			this.inputLSX.SelectedIndexChanged += new System.EventHandler(this.onInputMappingChanged);
+			// 
+			// label8
+			// 
+			this.label8.Location = new System.Drawing.Point(3, 145);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(66, 20);
+			this.label8.TabIndex = 16;
+			this.label8.Text = "RT";
+			this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label9
+			// 
+			this.label9.Location = new System.Drawing.Point(3, 125);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(66, 20);
+			this.label9.TabIndex = 15;
+			this.label9.Text = "LT";
+			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label6
+			// 
+			this.label6.Location = new System.Drawing.Point(3, 105);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(66, 20);
+			this.label6.TabIndex = 14;
+			this.label6.Text = "RS Y";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label7
+			// 
+			this.label7.Location = new System.Drawing.Point(3, 85);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(66, 20);
+			this.label7.TabIndex = 13;
+			this.label7.Text = "RS X";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label5
+			// 
+			this.label5.Location = new System.Drawing.Point(3, 65);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(66, 20);
+			this.label5.TabIndex = 12;
+			this.label5.Text = "LS Y";
+			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label4
+			// 
+			this.label4.Location = new System.Drawing.Point(3, 45);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(66, 20);
+			this.label4.TabIndex = 11;
+			this.label4.Text = "LS X";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(395, 120);
+			this.ClientSize = new System.Drawing.Size(351, 373);
+			this.Controls.Add(this.RemappingPanel);
 			this.Controls.Add(this.panelControls);
 			this.Controls.Add(this.labelInfo);
 			this.Controls.Add(this.buttonActivate);
@@ -213,8 +721,8 @@
 			this.NotifyContextMenu.ResumeLayout(false);
 			this.panelControls.ResumeLayout(false);
 			this.panelControls.PerformLayout();
+			this.RemappingPanel.ResumeLayout(false);
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -234,6 +742,48 @@
 		private System.Windows.Forms.ComboBox comboVJoyDevices;
 		private System.Windows.Forms.Label labelInfo;
 		private System.Windows.Forms.Panel panelControls;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Panel RemappingPanel;
+		private System.Windows.Forms.ComboBox inputBack;
+		private System.Windows.Forms.ComboBox inputStart;
+		private System.Windows.Forms.ComboBox inputRightStick;
+		private System.Windows.Forms.ComboBox inputLeftStick;
+		private System.Windows.Forms.ComboBox inputDPadDown;
+		private System.Windows.Forms.ComboBox inputDPadUp;
+		private System.Windows.Forms.ComboBox inputDPadRight;
+		private System.Windows.Forms.ComboBox inputDPadLeft;
+		private System.Windows.Forms.ComboBox inputRB;
+		private System.Windows.Forms.ComboBox inputLB;
+		private System.Windows.Forms.ComboBox inputY;
+		private System.Windows.Forms.ComboBox inputX;
+		private System.Windows.Forms.ComboBox inputB;
+		private System.Windows.Forms.ComboBox inputA;
+		private System.Windows.Forms.ComboBox inputRT;
+		private System.Windows.Forms.ComboBox inputLT;
+		private System.Windows.Forms.ComboBox inputRSY;
+		private System.Windows.Forms.ComboBox inputRSX;
+		private System.Windows.Forms.ComboBox inputLSY;
+		private System.Windows.Forms.Label label22;
+		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.Label label19;
+		private System.Windows.Forms.Label label20;
+		private System.Windows.Forms.Label label21;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.ComboBox inputLSX;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label label4;
 	}
 }
 
