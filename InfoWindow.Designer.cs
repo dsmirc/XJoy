@@ -46,8 +46,9 @@
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(16, 195);
+			this.pictureBox1.Location = new System.Drawing.Point(16, 150);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(24, 24);
 			this.pictureBox1.TabIndex = 0;
@@ -55,8 +56,9 @@
 			// 
 			// label1
 			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(46, 200);
+			this.label1.Location = new System.Drawing.Point(46, 155);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(258, 13);
 			this.label1.TabIndex = 1;
@@ -64,8 +66,9 @@
 			// 
 			// label2
 			// 
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(46, 234);
+			this.label2.Location = new System.Drawing.Point(46, 189);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(245, 13);
 			this.label2.TabIndex = 3;
@@ -73,9 +76,10 @@
 			// 
 			// pictureBox2
 			// 
+			this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
 			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.pictureBox2.Location = new System.Drawing.Point(16, 229);
+			this.pictureBox2.Location = new System.Drawing.Point(16, 184);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(24, 24);
 			this.pictureBox2.TabIndex = 2;
@@ -103,8 +107,9 @@
 			// 
 			// label5
 			// 
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(12, 142);
+			this.label5.Location = new System.Drawing.Point(12, 97);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(308, 27);
 			this.label5.TabIndex = 6;
@@ -113,7 +118,8 @@
 			// 
 			// linkMasterKenth
 			// 
-			this.linkMasterKenth.Location = new System.Drawing.Point(12, 169);
+			this.linkMasterKenth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.linkMasterKenth.Location = new System.Drawing.Point(12, 124);
 			this.linkMasterKenth.Name = "linkMasterKenth";
 			this.linkMasterKenth.Size = new System.Drawing.Size(308, 23);
 			this.linkMasterKenth.TabIndex = 7;
@@ -141,12 +147,13 @@
 			this.labelAssemblyVersion.TabIndex = 9;
 			this.labelAssemblyVersion.Text = "<assembly version>";
 			this.labelAssemblyVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.labelAssemblyVersion.Visible = false;
 			// 
 			// InfoWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(328, 261);
+			this.ClientSize = new System.Drawing.Size(328, 216);
 			this.Controls.Add(this.labelAssemblyVersion);
 			this.Controls.Add(this.labelVersion);
 			this.Controls.Add(this.linkMasterKenth);
