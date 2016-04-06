@@ -67,6 +67,7 @@ namespace XJoy
 
 		// Should match length of Inputs
 		public const short InputCount = 20;
+		public byte LastActiveControllerIndex = 0;
 
 		private Controller m_activeController = null;
 
@@ -88,6 +89,8 @@ namespace XJoy
 			if (Index >= (byte)UserIndex.One && Index <= (byte)UserIndex.Four)
 			{
 				m_activeController = new Controller((UserIndex)Index);
+				LastActiveControllerIndex = Index;
+
 				if (!m_activeController.IsConnected)
 					m_activeController = null;
 			}
