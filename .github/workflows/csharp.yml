@@ -23,7 +23,8 @@ jobs:
       - uses: nuget/setup-nuget@v2
         with:
           nuget-version: latest
-      - run: |
+      - name: install
+        run: |
          nuget install SharpDX
          nuget install SharpDX.XInput
 
