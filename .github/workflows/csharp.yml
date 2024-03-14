@@ -20,9 +20,10 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1.13.0
 
       - name: setup nuget
-      - uses: nuget/setup-nuget@v2
+        uses: nuget/setup-nuget@v2
         with:
           nuget-version: latest
+          
       - name: install
         run: |
          nuget install SharpDX
