@@ -124,15 +124,7 @@
   <ItemGroup>
     <None Include="extra\icon_refresh_darkgreen_24.png" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="gitversion.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>"git.exe" describe --long --tags --dirty &gt; "$(ProjectDir)gitversion.txt"</PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
