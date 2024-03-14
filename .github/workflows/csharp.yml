@@ -18,7 +18,14 @@ jobs:
 
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1.13.0
-            
+
+      - name: setup nuget
+      - uses: nuget/setup-nuget@v2
+        with:
+          nuget-version: latest
+      - run: |
+         nuget install SharpDX
+         nuget install SharpDX.XInput
 
       - name: Compile for Windows
         run: |
