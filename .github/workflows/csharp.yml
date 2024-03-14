@@ -31,7 +31,7 @@ jobs:
 
       - name: Compile for Windows
         run: |
-         msbuild XJoy.sln /p:Configuration=Release /p:Platform="Any CPU"
+         msbuild XJoy.sln /p:Configuration=Release /p:Platform="Any CPU" /p:vjoy=vJoyInterfaceWrap.dll
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v2
