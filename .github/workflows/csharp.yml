@@ -22,7 +22,7 @@ jobs:
 
       - name: Compile for Windows
         run: |
-         msbuild XJoy.sln
+         msbuild XJoy.sln /p:Configuration=Release /p:Platform="Any CPU"
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v2
